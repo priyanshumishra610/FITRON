@@ -1,6 +1,10 @@
 # 🏋️‍♂️ FITRON — The AI Fitness OS
 
-> **“Train Smart. Train Safe. Train FITRON.”**
+> **"Train Smart. Train Safe. Train FITRON."**
+
+![FITRON AI Fitness OS](assets/fitron-hero-image.png)
+
+*FITRON: The world's first AI-powered fitness OS with real-time pose detection, form analysis, and celebrity physique mapping*
 
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
@@ -12,10 +16,10 @@
 
 ## 🚀 What is FITRON?
 
-**FITRON** is the world’s first **AI-powered fitness OS** that does what no other app does:
+**FITRON** is the world's first **AI-powered fitness OS** that does what no other app does:
 - Tracks **every single rep**
 - Detects bad form, unsafe loads, ego-lifting
-- Locks your plan when you’re reckless
+- Locks your plan when you're reckless
 - Provides an AI + Human Trainer fallback
 - Maps your **Goal Physique** with celebrity-inspired blueprints
 - Updates your training daily using **ZenML pipelines**
@@ -28,10 +32,10 @@
 OpenCV + YOLO + SAM + Mediapipe deliver second-by-second pose, rep speed, range of motion, and fatigue signals.
 
 ✅ **Ego-Proof Your Lifts.**  
-Auto-regulation logic detects when you’re pushing past safe limits, locks risky sets, and adjusts your weights instantly — no injury, no excuses.
+Auto-regulation logic detects when you're pushing past safe limits, locks risky sets, and adjusts your weights instantly — no injury, no excuses.
 
 ✅ **Celebrity Physique Roadmap.**  
-*“Want Salman Khan’s chest? Arnold’s arms? Bruce Lee’s core?”*  
+*"Want Salman Khan's chest? Arnold's arms? Bruce Lee's core?"*  
 FITRON reverse-engineers iconic physiques using CLIP embeddings and physique databases, then plots a data-driven plan, ETA, and daily adjustments.
 
 ✅ **Per-Rep Heatmap (Pro).**  
@@ -48,7 +52,7 @@ Powered by **ZenML**, your entire fitness data graph — sets, reps, form, fatig
 ## 🧩 What Makes FITRON Unbeatable?
 
 - 🔍 **Real Rep Intelligence:** Not just set counting — every rep velocity, angle, and cheat detected.
-- 🧠 **True Goal Matching:** Don’t settle for generic “bulking plans” — get a bespoke blueprint for *your genetics, your timeline, your dream physique*.
+- 🧠 **True Goal Matching:** Don't settle for generic "bulking plans" — get a bespoke blueprint for *your genetics, your timeline, your dream physique*.
 - 🎥 **Train Like a Pro:** Upload your lift → get AI overlays → get coach feedback → fix form → get stronger → repeat.
 - 🌐 **Trainer Marketplace:** (Coming Soon) Trainers publish plug-ins for martial arts, powerlifting, sports-specific drills. Earn while your AI module runs.
 
@@ -62,7 +66,7 @@ Counts, logs, and scores every rep with OpenCV + YOLO + pose angles.
 
 ### ✅ Ego-Lifter Auto-Regulation
 
-Detects when you’re lifting dangerously → locks plan → requires trainer override.
+Detects when you're lifting dangerously → locks plan → requires trainer override.
 
 ### ✅ Goal Physique Mapper
 
@@ -140,7 +144,7 @@ flutter run
 
 ## 👑 Vision
 
-> *“No lifter left behind. Train smarter. Train safer. Build your dream physique, rep by rep.”*
+> *"No lifter left behind. Train smarter. Train safer. Build your dream physique, rep by rep."*
 
 ---
 
