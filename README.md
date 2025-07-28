@@ -1,5 +1,9 @@
 <p align="center">
+<<<<<<< HEAD
   <img src="assets/banner.png" alt="FITRON AI Fitness OS" width="100%">
+=======
+  <img src="assets/photo_2025-07-29%2000.56.43.jpeg" alt="FITRON AI Fitness OS" width="100%">
+>>>>>>> 346a116545778bac4c83ebaf871e35c1a1605716
 </p>
 
 # 🏋️‍♂️ **FITRON — The AI Fitness OS**
@@ -18,6 +22,7 @@
 
 ## 💡 **What is FITRON?**
 
+<<<<<<< HEAD
 **FITRON** isn't another generic fitness app —  
 it's your personal **AI-powered fitness OS**, designed to train, protect, and transform you like a world-class coach would — but smarter, faster, and always available.
 
@@ -28,6 +33,18 @@ it's your personal **AI-powered fitness OS**, designed to train, protect, and tr
 - ✅ Fine-tunes workouts and diet recommendations using real performance data
 - ✅ Lets you **escalate to real, certified trainers** when you want human oversight
 - ✅ Provides an **interactive AI Coach** that talks back, plans, corrects, and adapts
+=======
+**FITRON** isn’t another generic fitness app —  
+it’s your personal **AI-powered fitness OS**, designed to train, protect, and transform you like a world-class coach would — but smarter, faster, and always available.
+
+- Tracks **every rep** with real-time pose estimation and correction
+- Detects **unsafe lifting & ego-lifting** — locks dangerous sets to protect you
+- Maps your goals to **celebrity-level physiques** using advanced CLIP embeddings
+- Generates daily adaptive plans powered by **ZenML pipelines**
+- Fine-tunes workouts and diet recommendations using real performance data
+- Lets you **escalate to real, certified trainers** when you want human oversight
+- Provides an **interactive AI Coach** that talks back, plans, corrects, and adapts
+>>>>>>> 346a116545778bac4c83ebaf871e35c1a1605716
 
 No more guesswork. No more bad form. No more gym anxiety.  
 FITRON is your **coach, physio, nutritionist, and trainer — all in one AI OS.**
@@ -46,7 +63,11 @@ FITRON is your **coach, physio, nutritionist, and trainer — all in one AI OS.*
 ✅ **FITRON:**  
 - Tracks **every single rep** in real-time using OpenCV + YOLO + Mediapipe  
 - Analyzes form, highlights unsafe technique, and prevents ego lifting  
+<<<<<<< HEAD
 - **Maps dream physiques** — *"Want Salman Khan's shoulders?"* FITRON shows you exactly how to build them  
+=======
+- **Maps dream physiques** — *“Want Salman Khan’s shoulders?”* FITRON shows you exactly how to build them  
+>>>>>>> 346a116545778bac4c83ebaf871e35c1a1605716
 - Uses **ZenML + MLflow** to auto-update your training & diet daily  
 - Offers **human trainer escalation** for Pro users — real people watch your form, chat with you, and keep you on track  
 - Next-gen **Trainer Dashboard** for live monitoring & feedback  
@@ -63,15 +84,24 @@ FITRON is your **coach, physio, nutritionist, and trainer — all in one AI OS.*
 
 ---
 
+<<<<<<< HEAD
 ## 🔮 **What's Next — The FITRON Roadmap**
 
 🚀 **Phase 1:** Core pose estimation, form correction, AI Coach, and Trainer Dashboard  
 🧩 **Phase 2:**  
+=======
+## 🔮 **What’s Next — The FITRON Roadmap**
+
+- Core pose estimation, form correction, AI Coach, and Trainer Dashboard   
+>>>>>>> 346a116545778bac4c83ebaf871e35c1a1605716
 - AR overlays for real-time pose feedback  
 - Biometric wearables integration (Apple Watch, Fitbit)  
 - RAG-powered coaching memory for smart follow-ups  
 - Human trainer marketplace for instant expert support  
+<<<<<<< HEAD
 🎮 **Phase 3:**  
+=======
+>>>>>>> 346a116545778bac4c83ebaf871e35c1a1605716
 - Community hub: leaderboards, daily streaks, group challenges  
 - Body transformation competitions with AI scoring  
 - Plug & play APIs for gyms, PTs, and physiotherapists
@@ -84,6 +114,7 @@ FITRON is your **coach, physio, nutritionist, and trainer — all in one AI OS.*
 
 ---
 
+<<<<<<< HEAD
 ## 🗂️ **Folder Structure**
 
 ```
@@ -104,3 +135,11 @@ fitron/
 👨‍💻 **Lead Dev:**  > Priyanshu Mishra
 
 
+=======
+
+## 📬 **Contact**
+
+👨‍💻 **Lead Dev:**
+> Priyanshu Mishra
+---
+>>>>>>> 346a116545778bac4c83ebaf871e35c1a1605716
