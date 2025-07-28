@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITRON AI Fitness OS - Mobile Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .phone-container {
+            width: 375px;
+            height: 812px;
+            background: #000;
+            border-radius: 40px;
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #8b5cf6 100%);
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .status-bar {
+            height: 44px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .app-header {
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .app-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .app-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .content {
+            padding: 0 20px;
+            height: calc(100% - 140px);
+            overflow-y: auto;
+        }
+
+        .welcome-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .welcome-text {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .welcome-subtext {
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 16px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .stat-value {
+            color: white;
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            color: rgba(255,255,255,0.8);
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .ai-coach {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .coach-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .coach-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #f59e0b, #f97316);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 18px;
+        }
+
+        .coach-name {
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .coach-message {
+            color: rgba(255,255,255,0.9);
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .coach-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            border-radius: 12px;
+            padding: 8px 12px;
+            color: white;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .action-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .workout-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .workout-title {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .workout-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .workout-date {
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+        }
+
+        .workout-duration {
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+        }
+
+        .form-score {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .form-label {
+            color: rgba(255,255,255,0.8);
+            font-size: 14px;
+            margin-right: 12px;
+        }
+
+        .form-bar {
+            flex: 1;
+            height: 8px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .form-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #10b981, #34d399);
+            border-radius: 4px;
+            width: 87%;
+        }
+
+        .form-percentage {
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .exercises {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .exercise-tag {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .bottom-nav {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(20px);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: rgba(255,255,255,0.6);
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-item.active {
+            color: white;
+        }
+
+        .nav-icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .fab {
+            position: absolute;
+            bottom: 100px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #f59e0b, #f97316);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(249, 115, 22, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 32px rgba(249, 115, 22, 0.6);
+        }
+
+        .demo-info {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .slide-up {
+            animation: slideUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-container">
+        <div class="phone-screen">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>FITRON</span>
+                <span>100%</span>
+            </div>
+
+            <div class="app-header">
+                <div class="app-title">FITRON</div>
+                <div class="app-subtitle">AI Fitness OS</div>
+            </div>
+
+            <div class="content">
+                <div class="welcome-card slide-up">
+                    <div class="welcome-text">Welcome back, Demo User! 💪</div>
+                    <div class="welcome-subtext">Ready to crush your workout today? Your AI coach is here to guide you.</div>
+                </div>
+
+                <div class="stats-grid slide-up">
+                    <div class="stat-card">
+                        <div class="stat-value">1,200</div>
+                        <div class="stat-label">Total Reps</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">87%</div>
+                        <div class="stat-label">Form Score</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">15</div>
+                        <div class="stat-label">Workouts</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">+25lbs</div>
+                        <div class="stat-label">Bench Press</div>
+                    </div>
+                </div>
+
+                <div class="ai-coach slide-up">
+                    <div class="coach-header">
+                        <div class="coach-avatar">🤖</div>
+                        <div class="coach-name">AI Coach</div>
+                    </div>
+                    <div class="coach-message">Your form is looking great! Ready to start your chest day workout? I'll track every rep and give you real-time feedback.</div>
+                    <div class="coach-actions">
+                        <button class="action-btn">Form Check</button>
+                        <button class="action-btn">Nutrition</button>
+                        <button class="action-btn">Progress</button>
+                    </div>
+                </div>
+
+                <div class="workout-card slide-up">
+                    <div class="workout-title">Yesterday's Workout</div>
+                    <div class="workout-meta">
+                        <div class="workout-date">Chest & Triceps</div>
+                        <div class="workout-duration">45 min</div>
+                    </div>
+                    <div class="form-score">
+                        <div class="form-label">Form Score</div>
+                        <div class="form-bar">
+                            <div class="form-fill"></div>
+                        </div>
+                        <div class="form-percentage">87%</div>
+                    </div>
+                    <div class="exercises">
+                        <div class="exercise-tag">Bench Press</div>
+                        <div class="exercise-tag">Incline Press</div>
+                        <div class="exercise-tag">Dips</div>
+                        <div class="exercise-tag">Tricep Extensions</div>
+                    </div>
+                </div>
+
+                <div class="workout-card slide-up">
+                    <div class="workout-title">2 Days Ago</div>
+                    <div class="workout-meta">
+                        <div class="workout-date">Leg Day</div>
+                        <div class="workout-duration">55 min</div>
+                    </div>
+                    <div class="form-score">
+                        <div class="form-label">Form Score</div>
+                        <div class="form-bar">
+                            <div class="form-fill" style="width: 92%;"></div>
+                        </div>
+                        <div class="form-percentage">92%</div>
+                    </div>
+                    <div class="exercises">
+                        <div class="exercise-tag">Squats</div>
+                        <div class="exercise-tag">Deadlifts</div>
+                        <div class="exercise-tag">Lunges</div>
+                        <div class="exercise-tag">Calf Raises</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fab pulse">🎥</div>
+
+            <div class="bottom-nav">
+                <div class="nav-item active">
+                    <div class="nav-icon">🏠</div>
+                    <div>Home</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">💪</div>
+                    <div>Workout</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">🎯</div>
+                    <div>Goals</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">📊</div>
+                    <div>Analytics</div>
+                </div>
+            </div>
+
+            <div class="demo-info">
+                Mobile Demo
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactivity
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', function() {
+                document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        document.querySelector('.fab').addEventListener('click', function() {
+            alert('🎥 Starting workout recording...\n\nFITRON will now:\n• Track your reps in real-time\n• Analyze your form\n• Provide instant feedback\n• Detect ego-lifting\n• Keep you safe!');
+        });
+
+        document.querySelectorAll('.action-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const action = this.textContent;
+                alert(`🤖 AI Coach: ${action}\n\nI'll help you with ${action.toLowerCase()}! This feature provides personalized guidance based on your workout data and goals.`);
+            });
+        });
+
+        // Simulate real-time updates
+        setInterval(() => {
+            const stats = document.querySelectorAll('.stat-value');
+            stats.forEach(stat => {
+                if (stat.textContent.includes('%')) {
+                    const currentValue = parseInt(stat.textContent);
+                    const newValue = Math.max(80, Math.min(95, currentValue + (Math.random() - 0.5) * 2));
+                    stat.textContent = Math.round(newValue) + '%';
+                }
+            });
+        }, 5000);
+    </script>
+</body>
+</html> 

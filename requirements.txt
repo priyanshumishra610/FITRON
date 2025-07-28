@@ -1,0 +1,71 @@
+# FITRON AI Fitness OS - Backend Dependencies
+
+# FastAPI and ASGI
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Database
+sqlalchemy==2.0.23
+asyncpg==0.29.0
+motor==3.3.2
+pymongo==4.6.0
+
+# Authentication and Security
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+python-multipart==0.0.6
+
+# Configuration
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Computer Vision and AI
+opencv-python==4.8.1.78
+mediapipe==0.10.7
+ultralytics==8.0.196
+torch==2.1.1
+torchvision==0.16.1
+clip==1.0
+Pillow==10.1.0
+
+# Data Processing
+numpy==1.25.2
+pandas==2.1.4
+
+# HTTP and API
+httpx==0.25.2
+requests==2.31.0
+
+# Caching and Real-time
+redis==5.0.1
+aioredis==2.0.1
+
+# File Storage
+boto3==1.34.0
+minio==7.2.0
+
+# Analytics and Monitoring
+posthog==3.4.0
+
+# Development and Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Utilities
+python-dotenv==1.0.0
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Optional: ZenML for ML pipelines
+# zenml==0.55.1
+
+# Optional: Firebase for mobile notifications
+# firebase-admin==6.2.0
+
+# Optional: Socket.io for real-time features
+# python-socketio==5.10.0 
