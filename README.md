@@ -1,171 +1,90 @@
-# 🏋️‍♂️ FITRON — The AI Fitness OS
+<p align="center">
+  <img src="assets/photo_2025-07-29%2000.56.43.jpeg" alt="FITRON AI Fitness OS" width="100%">
+</p>
 
-> **"Train Smart. Train Safe. Train FITRON."**
+# 🏋️‍♂️ **FITRON — The AI Fitness OS**
 
-![FITRON AI Fitness OS](assets/photo_2025-07-29%2000.56.43.jpeg)
+**Train Smart. Train Safe. Build Your Dream Physique.**
 
-*FITRON: The world's first AI-powered fitness OS with real-time pose detection, form analysis, and celebrity physique mapping*
+---
 
 ![Build](https://img.shields.io/badge/build-passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![LLM](https://img.shields.io/badge/LLM-GPT%204%20%7C%20LangChain-yellow)
 ![PoseEngine](https://img.shields.io/badge/Computer--Vision-OpenCV%20%7C%20YOLO-orange)
+![LLM](https://img.shields.io/badge/LLM-GPT%204%20%7C%20LangChain-yellow)
 ![ZenML](https://img.shields.io/badge/Pipelines-ZenML-green)
 
 ---
 
-## 🚀 What is FITRON?
+## 💡 **What is FITRON?**
 
-**FITRON** is the world's first **AI-powered fitness OS** that does what no other app does:
-- Tracks **every single rep**
-- Detects bad form, unsafe loads, ego-lifting
-- Locks your plan when you're reckless
-- Provides an AI + Human Trainer fallback
-- Maps your **Goal Physique** with celebrity-inspired blueprints
-- Updates your training daily using **ZenML pipelines**
+**FITRON** isn’t another generic fitness app —  
+it’s your personal **AI-powered fitness OS**, designed to train, protect, and transform you like a world-class coach would — but smarter, faster, and always available.
 
----
+- Tracks **every rep** with real-time pose estimation and correction
+- Detects **unsafe lifting & ego-lifting** — locks dangerous sets to protect you
+- Maps your goals to **celebrity-level physiques** using advanced CLIP embeddings
+- Generates daily adaptive plans powered by **ZenML pipelines**
+- Fine-tunes workouts and diet recommendations using real performance data
+- Lets you **escalate to real, certified trainers** when you want human oversight
+- Provides an **interactive AI Coach** that talks back, plans, corrects, and adapts
 
-## 🔥 Why FITRON is 10X Smarter
-
-✅ **Pose. Precision. Progress.**  
-OpenCV + YOLO + SAM + Mediapipe deliver second-by-second pose, rep speed, range of motion, and fatigue signals.
-
-✅ **Ego-Proof Your Lifts.**  
-Auto-regulation logic detects when you're pushing past safe limits, locks risky sets, and adjusts your weights instantly — no injury, no excuses.
-
-✅ **Celebrity Physique Roadmap.**  
-*"Want Salman Khan's chest? Arnold's arms? Bruce Lee's core?"*  
-FITRON reverse-engineers iconic physiques using CLIP embeddings and physique databases, then plots a data-driven plan, ETA, and daily adjustments.
-
-✅ **Per-Rep Heatmap (Pro).**  
-Every rep scored, stored, visualized. Trainers can watch your sticking points and break your plateau in real-time.
-
-✅ **Human + AI Hybrid Coaching.**  
-AI does the grunt work — live posture correction, diet tweaks, micro-loading. Pro unlocks your personal human trainer for form checks, overrides, and accountability.
-
-✅ **Fully Autonomous Pipelines.**  
-Powered by **ZenML**, your entire fitness data graph — sets, reps, form, fatigue, sleep, nutrition — flows into a smart loop that rewrites your plan every day.
+No more guesswork. No more bad form. No more gym anxiety.  
+FITRON is your **coach, physio, nutritionist, and trainer — all in one AI OS.**
 
 ---
 
-## 🧩 What Makes FITRON Unbeatable?
+## ⚡️ **Why FITRON is 10X Smarter**
 
-- 🔍 **Real Rep Intelligence:** Not just set counting — every rep velocity, angle, and cheat detected.
-- 🧠 **True Goal Matching:** Don't settle for generic "bulking plans" — get a bespoke blueprint for *your genetics, your timeline, your dream physique*.
-- 🎥 **Train Like a Pro:** Upload your lift → get AI overlays → get coach feedback → fix form → get stronger → repeat.
-- 🌐 **Trainer Marketplace:** (Coming Soon) Trainers publish plug-ins for martial arts, powerlifting, sports-specific drills. Earn while your AI module runs.
+❌ **Other Fitness Apps:**  
+- Just show static workouts or generic plans  
+- Zero posture or safety checks  
+- No personalized goal physique mapping  
+- No real trainer to fix mistakes in real-time  
+- Limited or no adaptive daily logic
 
----
-
-## 🎬 Demo & Showcase
-
-![FITRON Demo Interface](assets/Screenshot%202025-07-29%20at%201.07.57%20AM.png)
-
-*Experience the future of fitness training with FITRON's AI-powered interface*
-
----
-
-## 🧩 Core Modules
-
-### ✅ Rep-by-Rep Tracker
-
-Counts, logs, and scores every rep with OpenCV + YOLO + pose angles.
-
-### ✅ Ego-Lifter Auto-Regulation
-
-Detects when you're lifting dangerously → locks plan → requires trainer override.
-
-### ✅ Goal Physique Mapper
-
-Uses CLIP to analyze celebrity physiques → designs a realistic roadmap for your genetics, timeline, and lifestyle.
-
-### ✅ ZenML Adaptive Pipelines
-
-All workout, diet, recovery data flows into a smart pipeline that rewrites your plan daily.
-
-### ✅ Pro Trainer Dashboard
-
-Upload lift videos, get human feedback, override risky sets — only in **Pro**.
+✅ **FITRON:**  
+- Tracks **every single rep** in real-time using OpenCV + YOLO + Mediapipe  
+- Analyzes form, highlights unsafe technique, and prevents ego lifting  
+- **Maps dream physiques** — *“Want Salman Khan’s shoulders?”* FITRON shows you exactly how to build them  
+- Uses **ZenML + MLflow** to auto-update your training & diet daily  
+- Offers **human trainer escalation** for Pro users — real people watch your form, chat with you, and keep you on track  
+- Next-gen **Trainer Dashboard** for live monitoring & feedback  
+- Seamlessly combines **AI + CV + LLM + Real Trainers** in one OS  
+- Designed for absolute beginners **and** elite athletes
 
 ---
 
-## 🗂️ Repo Structure
+## 🎥 **Demo & Showcase**
 
-```
-fitron/
-├── backend/             # FastAPI + CV + Auto-Regulation
-├── mobile/              # Flutter: Camera, AR, Chat
-├── trainer_dashboard/   # Pro: Human trainer tools
-├── data/                # Raw videos, rep logs, embeddings
-├── notebooks/           # Prototype pipelines & pose models
-├── deployment/          # Docker, Railway, CI/CD
-├── assets/              # Images, Mermaid diagram PNGs
-```
+<p align="center">
+  <img src="assets/demo.png" alt="FITRON Demo Interface" width="100%">
+</p>
 
 ---
 
-## ⚙️ Core Tech Stack
+## 🔮 **What’s Next — The FITRON Roadmap**
 
-| Layer          | Tools                      |
-| -------------- | -------------------------- |
-| Pose Detection | OpenCV, YOLOv8, Mediapipe  |
-| LLM + RAG      | GPT-4, LangChain, CLIP     |
-| Pipelines      | ZenML, MLflow              |
-| Backend        | FastAPI, Socket.io         |
-| Mobile         | Flutter (AR, Camera, Chat) |
-| Realtime       | Firebase, Socket.io        |
-| DB             | Supabase, MongoDB          |
-| Analytics      | PostHog, Metabase          |
+- Core pose estimation, form correction, AI Coach, and Trainer Dashboard   
+- AR overlays for real-time pose feedback  
+- Biometric wearables integration (Apple Watch, Fitbit)  
+- RAG-powered coaching memory for smart follow-ups  
+- Human trainer marketplace for instant expert support  
+- Community hub: leaderboards, daily streaks, group challenges  
+- Body transformation competitions with AI scoring  
+- Plug & play APIs for gyms, PTs, and physiotherapists
 
 ---
 
-## ✅ Quickstart
+## 👑 **Why We Built FITRON**
 
-```bash
-# Clone repo
-git clone https://github.com/priyanshumishra610/FITRON.git
-cd fitron
-
-# Backend
-cd backend
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-
-# Mobile
-cd mobile/fitron_app
-flutter pub get
-flutter run
-```
+> *"We built FITRON to make sure no beginner ever feels lost in a gym again. To give every athlete, lifter, or casual gym-goer the same elite-level coaching, form correction, and safety net only pro athletes get — powered by AI, secured by real human oversight."*
 
 ---
 
-## 🏁 Roadmap
 
-| Phase      | Highlights                                               |
-| ---------- | -------------------------------------------------------- |
-| ✅ MVP      | Pose detection, rep counter, AI coach                    |
-| 🔜 Phase 2 | Ego-lifter safety, per-rep logs, Goal Physique Blueprint |
-| 🔜 Phase 3 | AR overlays, biometric sync, trainer plug-ins            |
+## 📬 **Contact**
 
----
-
-## 👑 Vision
-
-> *"No lifter left behind. Train smarter. Train safer. Build your dream physique, rep by rep."*
-
----
-
-## 📬 Contact
-
-**Lead Dev:** 
+👨‍💻 **Lead Dev:**
 > Priyanshu Mishra
-
-
 ---
-
-## 📜 License
-
-APACHE 2.0. 🏋️‍♂️🤖
-
-
