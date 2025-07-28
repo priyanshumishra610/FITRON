@@ -2,7 +2,7 @@
 
 > **"Train Smart. Train Safe. Train FITRON."**
 
-![FITRON AI Fitness OS](assets/fitron-hero-image.png)
+![FITRON AI Fitness OS](assets/photo_2025-07-29%2000.56.43.jpeg)
 
 *FITRON: The world's first AI-powered fitness OS with real-time pose detection, form analysis, and celebrity physique mapping*
 
