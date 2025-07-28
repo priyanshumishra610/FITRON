@@ -58,6 +58,14 @@ Powered by **ZenML**, your entire fitness data graph — sets, reps, form, fatig
 
 ---
 
+## 🎬 Demo & Showcase
+
+![FITRON Demo Interface](assets/photo_2025-07-29%2000.56.43.jpeg)
+
+*Experience the future of fitness training with FITRON's AI-powered interface*
+
+---
+
 ## 🧩 Core Modules
 
 ### ✅ Rep-by-Rep Tracker
