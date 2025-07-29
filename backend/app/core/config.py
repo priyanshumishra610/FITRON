@@ -41,6 +41,10 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: Optional[str] = None
     CLIP_MODEL_PATH: str = "models/clip-vit-base-patch32"
     
+    # Ollama Configuration
+    OLLAMA_BASE_URL: str = "http://localhost:11434"
+    MODEL_NAME: str = "gemma"
+    
     # Computer Vision Models
     YOLO_MODEL_PATH: str = "models/yolov8n-pose.pt"
     MEDIAPIPE_MODEL_PATH: str = "models/mediapipe_pose"

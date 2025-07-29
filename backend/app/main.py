@@ -12,7 +12,7 @@ from contextlib import asynccontextmanager
 
 from app.core.config import settings
 from app.core.db import init_db
-from app.api import routes, auth, rep_tracking, auto_regulation, physique_goal
+from app.api import routes, auth, rep_tracking, auto_regulation, physique_goal, chatbot
 from app.utils.logger import setup_logger
 
 # Setup logging
@@ -62,6 +62,7 @@ app.include_router(auth.router, prefix="/api/v1/auth", tags=["Authentication"])
 app.include_router(rep_tracking.router, prefix="/api/v1/rep-tracking", tags=["Rep Tracking"])
 app.include_router(auto_regulation.router, prefix="/api/v1/auto-regulation", tags=["Auto Regulation"])
 app.include_router(physique_goal.router, prefix="/api/v1/physique-goal", tags=["Physique Goal"])
+app.include_router(chatbot.router, prefix="/api/v1/chatbot", tags=["AI Coach Chatbot"])
 app.include_router(routes.router, prefix="/api/v1", tags=["General"])
 
 @app.get("/")
